@@ -1,0 +1,59 @@
+<!-- ดึง layout.html มาใช้-->
+{% extends "layout.html" %}
+
+<!-- แทรกส่วน 'Home page' ในหน้า index ไปไว้ในไฟล์ layout-->
+{% block title %}
+Login
+{% endblock %}
+
+<!-- แทรกส่วนของ index มาวางในส่วนของ block content ในไฟล์ layout -->
+{% block content %}
+<!-- เนื้อหา (Content) -->
+<section class="form7 cid-tsJ8wGtENs" id="form7-q">
+    <div class="container">
+        <div class="mbr-section-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                <strong>Welcome</strong>
+            </h3>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-8 mx-auto mbr-form">
+                <form method="POST" class="mbr-form form-with-styler mx-auto">
+                    <!-- นำข้อมูลของ user ไปเก็บในรูปของ POST method-->
+                    {% csrf_token %}
+                    <!-- ตรวจสอบว่ามีการส่ง massages จาก views.py มาแสดงผลใน register.html หรือไม่-->
+                    {% if messages %}
+                        <!-- นำข้อมูล error, success massage มาแสดงผล -->
+                        {% for alerts in messages %}
+                        <div class="alert alert-{{alerts.tags}}" role="alert">
+                            <!-- ตัวแสดงผล massage ที่ได้รับ-->
+                            {{alerts}}
+                        </div>
+                        {% endfor %}
+                        <!-- เป็นการรูปเมื่อทำการ register สำเร็จจะแสดงขึ้นมา-->
+                        {% if login_complete %}
+                        <!-- เป็น popup เมื่อทำการสมัครสมาชิกสำเร็จ แล้วจะเป็นการนำ user ไปหน้า login -->
+                        <script>
+                            setTimeout(function() {
+                                login_notification();
+                            }, 1000);
+                        </script>
+                        {% endif %}
+                    {% endif %}
+                    <div class="dragArea row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3">
+                            <input type="text" name="username" placeholder="Username" class="form-control" value="">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3">
+                            <input type="password" name="password" placeholder="Password" class="form-control" value="">
+                        </div>
+                        <div class="col-auto mbr-section-btn align-center">
+                            <button type="submit" class="btn btn-primary display-4">Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

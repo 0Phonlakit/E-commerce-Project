@@ -1,0 +1,62 @@
+<!-- ดึง layout.html มาใช้-->
+{% extends "layout.html" %}
+
+<!-- ดึงฟังก์ชันการแปลงตัวเลขให้อยู่ในรูปของสกุลเงิน โดยดึง humanize จาก setting -->
+{% load humanize %}
+
+<!-- แทรกส่วน 'Home page' ในหน้า index ไปไว้ในไฟล์ layout-->
+{% block title %}
+Solid State Drive Products
+{% endblock %}
+
+<!-- แทรกส่วนของ index มาวางในส่วนของ block content ในไฟล์ layout -->
+{% block content %}
+<!-- เนื้อหา (Content) -->
+<section class="content2 cid-tsEQSCqggh" id="content2-2">
+    <div class="container">
+        <div class="mbr-section-head">
+            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                <strong>Solid State Drive Products</strong>
+            </h4>
+        </div>
+        <div class="row mt-4">
+            <!-- ข้อมูลสินค้า -->
+            <!-- ลูปข้อมูลสินค้าใน Products ที่เป็น trending -->
+            {% for product in ssd_product %}
+            <div class="item features-image сol-12 col-md-6 col-lg-4">
+                <div class="item-wrapper">
+                    <div class="item-img">
+                        <!-- ดึง path ของหน้า Product_Detail มาเชื่อมต่อ เมื่อทำการกดไปที่ product -->
+                        <a href="{% url 'Product_Detail' product.id %}">
+                            <!-- ดึงข้อมูลรูปภาพสินค้าจากการลูปมาใช้-->
+                            <img src="{{product.image.url}}">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h6 class="item-subtitle mbr-fonts-style mt-1 display-7">
+
+                            <!-- ดึงข้อมูลชื่อสินค้าจากการลูปมาใช้-->
+                            <strong>Product name : {{product.name}}</strong>
+                        </h6>
+
+                        <!-- ดึงข้อมูลราคาสินค้าจากการลูปมาใช้-->
+                        <!-- intcomma เป็นฟังก์ชันจาก humanize -->
+                        <p class="mbr-text mbr-fonts-style mt-3 display-7">Price : {{product.price | intcomma }} Baht</p>
+                    </div>
+                    <div class="mbr-section-btn item-footer mt-2">
+                        {% if product.stock <= 0 %}
+                            <h5 class= "mx-2 my-4 text-secondary"><strong>Out of stock</strong></h5>
+                        {% else %}
+                        <a href="{% url 'Add_Product' product.id %}" class="btn btn-primary display-4">
+                            <i class="bi bi-cart3"></i></i>&nbsp;
+                            Add to cart
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
