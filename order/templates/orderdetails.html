@@ -1,0 +1,64 @@
+<!-- ดึง layout.html มาใช้-->
+{% extends "layout.html" %}
+
+<!-- ดึงฟังก์ชันการแปลงตัวเลขให้อยู่ในรูปของสกุลเงิน โดยดึง humanize จาก setting -->
+{% load humanize %}
+
+<!-- แทรกส่วน 'Home page' ในหน้า index ไปไว้ในไฟล์ layout-->
+{% block title %}
+Order completed
+{% endblock %}
+
+<!-- แทรกส่วนของ index มาวางในส่วนของ block content ในไฟล์ layout -->
+{% block content %}
+<!-- เนื้อหา (Content) -->
+<section class="content2 cid-tsEQSCqggh" id="content2-2">
+    <div class="container my-5">
+        <div class="mbr-section-head">
+            <h4 class="mbr-section-title mbr-fonts-style align-start mb-0 display-2">
+                <strong>Order Detail #{{ order.id }}</strong>
+            </h4>
+        <br><br>
+        <div class="row my-2">
+            <table class="table text-center table-bordered my-3">
+                <thead>
+                    <h5>First Name     : {{ order.first_name }}</h5>
+                    <h5>Last Name      : {{ order.last_name }}</h5>
+                    <h5>Contact Number : {{ order.phone }}</h5>
+                    <h5>Address : {{ order.address }}</h5>
+                </thead>
+            </table>
+        </div>
+        <hr />
+        <div class="row my-5">
+            <table class="table text-center table-bordered my-5">
+                <thead>
+                  <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price </th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for item in order_items %}
+                    <tr>
+                        <td>{{ item.product }}</td>
+                        <td>{{ item.price | intcomma }}</td>
+                        <td>{{ item.quantity }} </td>
+                        <td>{{ item.sub_total | intcomma }}</td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><strong>Total amount due</strong></td>
+                        <td><strong>{{ order.total | intcomma }}</strong></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+    <br><br><br><br><br>
+</section>
+{% endblock %}
