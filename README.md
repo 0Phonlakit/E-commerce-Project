@@ -53,3 +53,55 @@ When the user clicks the profile icon (10), a dropdown will appear with two opti
 
 ![Loginpage](images/login%20page.png)
 <hr />
+
+From the dropdown, if the user goes to the register page, they can check the URL (12). When the user arrives at the register page, they will be asked to enter their information, as shown in the image below.
+
+![Registerpage](images/register%20page.png)
+<hr />
+
+If the user does not enter all of the required information, an alert will appear to let them know what information is missing (13). In this case, the user did not enter their email address, so an alert will appear to let them know that they need to enter their email address.
+
+![Registeruncompletepage](images/register%20uncomplete%20page.png)
+<hr />
+
+Once the user has entered all of the required information, an alert will appear with a green border and a pop-up tab (14). When the user clicks "OK", the website will take them to the login page.
+
+![Registercompletepage](images/register%20complete%20page.png)
+<hr />
+
+When the user enters the login page, if they enter incorrect information, an alert will appear to let them know that their information is incorrect (15).
+
+![Loginuncompletepage](images/login%20uncomplete%20page.png)
+<hr />
+
+If the user successfully logs in, a green alert with a pop-up tab will appear (16). When the user clicks "OK", the website will take them to the homepage.
+
+![Logincompletepage](images/login%20complete%20page.png)
+<hr />
+
+Then, when the user clicks the profile icon (17), the information in the dropdown will change to show the Order history and Logout pages.
+
+![Tabafterlogin](images/Tab%20after%20login.png)
+<hr />
+
+When the user clicks on a product image, they will be taken to the product details page, which can be checked from the URL (18). The product details page will include the following information:
+
+* Image
+* Name
+* Details
+* Quantity remaining in stock
+* Price
+* Add to cart button
+
+![Detailpage](images/detail%20page.png)
+<hr />
+
+The user can search for products using the search bar (19).
+
+![Searchitem](images/search%20item.png)
+<hr />
+
+When the user searches for a product, the website will take them to the search results page, which can be checked from the URL (20).
+
+![Searchitemcomplete](images/search%20item%20complete.png)
+<hr />
