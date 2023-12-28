@@ -105,3 +105,43 @@ When the user searches for a product, the website will take them to the search r
 
 ![Searchitemcomplete](images/search%20item%20complete.png)
 <hr />
+
+If the user searches for a product and does not find it, the website will show them a page that can be checked from the URL (21).
+
+![Searchnotfoundpage](images/search%20not%20found%20page.png)
+<hr />
+
+When the user clicks on the cart icon in the top right corner, the website will take them to the checkout page, which can be checked from the URL (22).
+
+![Cartwithitem](images/cart%20with%20item.png)
+<hr />
+
+When the user clicks on "Payment", they will be taken to a page where they can enter their phone number and shipping address. Once they have entered all of the required information, they can click on the "Submit" button (23) to confirm their purchase.
+
+![Orderpage](images/order%20page.png)
+<hr />
+
+When the user clicks on the "Submit" button, the website will show them a page that confirms their purchase, which can be checked from the URL (24).
+
+![Ordercompletepage](images/order%20complete%20page.png)
+<hr />
+
+After the user has completed their purchase, if they click on the cart icon in the top right corner, the website will show them a page that indicates that they have no items in their cart, which can be checked from the URL (25).
+
+![Cartnotitempage](images/cart%20not%20item%20page.png)
+<hr />
+
+After the user has completed their purchase, they can check the order details by clicking on the profile icon (17) and then clicking on "Order history". This will show them a page with the order number, date, total price, and a link to view the order details (27). This page can be checked from the URL (26).
+
+![Orderhistorypage](images/order%20history%20page.png)
+<hr />
+
+When the user clicks on the link to view the order details, they will be taken to the order details page, which can be checked from the URL (28). This page will include the name and surname that the user entered on the register page, as well as the phone number and address that they entered on the checkout page. It will also include the details of the products that they purchased, including the quantity and price.
+
+![Orderdetailpage](images/order%20detail%20page.png)
+<hr />
+
+To delete an item from the cart, the user can click on the trash can icon (29). When they do this, a popup (30) will appear to confirm that they want to delete the item.
+
+![Deleteitemincart](images/delete%20item%20in%20cart.png)
+<hr />
