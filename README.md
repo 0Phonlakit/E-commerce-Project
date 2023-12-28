@@ -3,10 +3,10 @@
 This project was created to study the creation of web applications using the Django framework and to improve the author's coding skills. It is not intended for commercial purposes.
 
 In general, this project simulates a web-based store. It consists of four major systems:
-1. **Storefront system**
-2. **User registration system** 
-3. **Shopping cart system** 
-4. **Order history system**
+1. <em> **Storefront system** </em>
+2. <em> **User registration system** </em> 
+3. <em> **Shopping cart system**  </em>
+4. <em> **Order history system** </em>
    
 For more detailed information, please refer to the following sections.
 
@@ -87,6 +87,7 @@ Then, when the user clicks the profile icon (17), the information in the dropdow
 When the user clicks on a product image, they will be taken to the product details page, which can be checked from the URL (18). The product details page will include the following information:
 
 * Image
+* Stock
 * Name
 * Details
 * Quantity remaining in stock
@@ -145,3 +146,15 @@ To delete an item from the cart, the user can click on the trash can icon (29). 
 
 ![Deleteitemincart](images/delete%20item%20in%20cart.png)
 <hr />
+
+When the user returns to the order details page, they will see that the quantity of the product in stock (31) has decreased after the order has been placed.
+
+![Itemafterbuy](images/item%20after%20buy.png)
+<hr />
+
+In this case, the user has purchased the same product twice. The quantity in the quantity field (32) is 2, so the price of the product has increased to the price of the product multiplied by the quantity. The total price is also added together for all of the products.
+
+![Itemquantitychack](images/item%20quantity%20chack.png)
+<hr />
+
+<em> **Thank you for your attention. I have now completed my presentation on the E-commerce project. If you have any feedback, please feel free to share it with me. I appreciate your time and consideration.** </em>
