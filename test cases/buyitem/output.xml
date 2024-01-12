@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20231220 14:22:44.041" rpa="false" schemaversion="4">
+<suite id="s1" name="Buy Item Test" source="C:\Users\admin\Downloads\E-commerce Website\test cases\buyitem\buy_item_test.robot">
+<test id="s1-t1" name="Open Browser with GUI and Logging" line="13">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${shop_url}</arg>
+<arg>${browser}</arg>
+<arg>options=add_argument("--disable-gpu --enable-logging --v=1")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231220 14:22:44.488" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8000/'.</msg>
+<status status="PASS" starttime="20231220 14:22:44.488" endtime="20231220 14:22:47.940"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector("a.btn-2").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231220 14:22:47.941" level="INFO">Executing JavaScript:
+document.querySelector("a.btn-2").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20231220 14:22:47.940" endtime="20231220 14:22:48.783"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="content2-2"]/div/div[1]/h4</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231220 14:22:48.784" endtime="20231220 14:22:48.835"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector("#navbarSupportedContent ul li:nth-child(4) a").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231220 14:22:48.837" level="INFO">Executing JavaScript:
+document.querySelector("#navbarSupportedContent ul li:nth-child(4) a").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20231220 14:22:48.836" endtime="20231220 14:22:48.853"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector("#navbarSupportedContent ul li:nth-child(4) div a:nth-child(2)").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231220 14:22:48.855" level="INFO">Executing JavaScript:
+document.querySelector("#navbarSupportedContent ul li:nth-child(4) div a:nth-child(2)").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20231220 14:22:48.854" endtime="20231220 14:22:49.011"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector("#form7-q div div:nth-child(2) form div div:nth-child(1) input").value = "${username}"</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231220 14:22:49.014" level="INFO">Executing JavaScript:
+document.querySelector("#form7-q div div:nth-child(2) form div div:nth-child(1) input").value = "tester"
+Without any arguments.</msg>
+<status status="PASS" starttime="20231220 14:22:49.012" endtime="20231220 14:22:49.037"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector("#form7-q div div:nth-child(2) form div div:nth-child(2) input").value = "${password}"</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231220 14:22:49.040" level="INFO">Executing JavaScript:
+document.querySelector("#form7-q div div:nth-child(2) form div div:nth-child(2) input").value = "1234"
+Without any arguments.</msg>
+<status status="PASS" starttime="20231220 14:22:49.037" endtime="20231220 14:22:49.069"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector("#form7-q div div:nth-child(2) form div div:nth-child(3) button").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231220 14:22:49.074" level="INFO">Executing JavaScript:
+document.querySelector("#form7-q div div:nth-child(2) form div div:nth-child(3) button").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20231220 14:22:49.071" endtime="20231220 14:22:49.387"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector("#navbarSupportedContent ul li:nth-child(2) a").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231220 14:22:49.397" level="INFO">Executing JavaScript:
+document.querySelector("#navbarSupportedContent ul li:nth-child(2) a").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20231220 14:22:49.395" endtime="20231220 14:22:49.581"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.evaluate('//*[@id="content2-2"]/div/div[2]/div[3]/div/div[1]/a', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231220 14:22:49.603" level="INFO">Executing JavaScript:
+document.evaluate('//*[@id="content2-2"]/div/div[2]/div[3]/div/div[1]/a', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20231220 14:22:49.601" endtime="20231220 14:22:49.868"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231220 14:22:50.108" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231220 14:22:49.878" endtime="20231220 14:22:50.108"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.evaluate('/html/body/div/div/div/div[2]/div/div[2]/a', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231220 14:22:50.109" level="INFO">Executing JavaScript:
+document.evaluate('/html/body/div/div/div/div[2]/div/div[2]/a', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20231220 14:22:50.109" endtime="20231220 14:22:50.384"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231220 14:22:50.520" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231220 14:22:50.384" endtime="20231220 14:22:50.521"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.evaluate('/html/body/section[3]/div/div/div/div/div/div/div[2]/div/a/button', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231220 14:22:50.529" level="INFO">Executing JavaScript:
+document.evaluate('/html/body/section[3]/div/div/div/div/div/div/div[2]/div/a/button', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20231220 14:22:50.528" endtime="20231220 14:22:50.708"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector("#content2-2 &gt; div &gt; div &gt; div.row &gt; form &gt; div:nth-child(2) &gt; div &gt; input").value = "${contact_num}"</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231220 14:22:50.710" level="INFO">Executing JavaScript:
+document.querySelector("#content2-2 &gt; div &gt; div &gt; div.row &gt; form &gt; div:nth-child(2) &gt; div &gt; input").value = "0123456789"
+Without any arguments.</msg>
+<status status="PASS" starttime="20231220 14:22:50.708" endtime="20231220 14:22:50.731"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector("#content2-2 &gt; div &gt; div &gt; div.row &gt; form &gt; div:nth-child(3) &gt; div &gt; input").value = "${address}"</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231220 14:22:50.733" level="INFO">Executing JavaScript:
+document.querySelector("#content2-2 &gt; div &gt; div &gt; div.row &gt; form &gt; div:nth-child(3) &gt; div &gt; input").value = "House No.- Apt- Bldg- Village- Alley- Road- District- Province- Postal Code-"
+Without any arguments.</msg>
+<status status="PASS" starttime="20231220 14:22:50.732" endtime="20231220 14:22:50.816"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231220 14:22:50.925" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231220 14:22:50.816" endtime="20231220 14:22:50.926"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector("#content2-2 &gt; div &gt; div &gt; div.col-auto.mbr-section-btn.align-center &gt; button").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231220 14:22:50.961" level="INFO">Executing JavaScript:
+document.querySelector("#content2-2 &gt; div &gt; div &gt; div.col-auto.mbr-section-btn.align-center &gt; button").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20231220 14:22:50.960" endtime="20231220 14:22:51.064"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231220 14:22:51.330" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231220 14:22:51.068" endtime="20231220 14:22:51.330"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231220 14:22:51.330" endtime="20231220 14:22:53.796"/>
+</kw>
+<status status="PASS" starttime="20231220 14:22:44.486" endtime="20231220 14:22:53.799"/>
+</test>
+<status status="PASS" starttime="20231220 14:22:44.045" endtime="20231220 14:22:53.801"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Buy Item Test">Buy Item Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
