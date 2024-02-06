@@ -160,5 +160,5 @@ In this case, the user has purchased the same product twice. The quantity in the
 <em> **Thank you for your attention. I have now completed my presentation on the E-commerce project. If you have any feedback, please feel free to share it with me. I appreciate your time and consideration.** </em>
 
 ## Postscript
-In addition to the presentation, the author has provided 4 test cases written using the Robot Framework. These test cases can be found in the `test cases` folder
+In addition to the presentation, the author has provided 4 test cases written using the **Robot Framework**. These test cases can be found in the `test cases` folder
 <hr />
